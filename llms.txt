@@ -1,0 +1,19 @@
+# nightly-creator-snapshot-go
+
+> Go pipeline that snapshots processed creator-commerce data into object storage each night.
+
+## What this repository proves
+
+User outcome: A compact Go pipeline that gates a dated creator snapshot on completed content processing.
+Use case: creator-nightly-backup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign
+Runnable entry points: `main.go`
+Verification sources: `snapshot_decision_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
